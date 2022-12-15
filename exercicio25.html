@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 25 | Lista FACCAT</title>
+</head>
+
+<body>
+    <!--Se o cliente comprar mais de 8 Kg em frutas ou o valor total da compra ultrapassar R$ 25,00, receberá ainda  um  desconto  de  10%  sobre  este  total.  Escreva  um  algoritmo  para  ler  a  quantidade  (em  Kg)  de morangos e a quantidade (em Kg) de maças adquiridas e escreva o valor a ser pago pelo cliente.-->
+    <script>
+        let kgMorango = parseInt(prompt("Digite quantos kg de Morango você deseja comprar(apenas números)"));
+
+        let kgMaca = parseInt(prompt("Digite quantos kg de Maçã você deseja comprar(apenas números)"));
+
+        if(kgMaca && kgMorango <= 5){
+            if(kgMaca + kgMorango > 8 || kgMaca * 2.50 + kgMorango * 1.80 > 25){
+                let priceDescP = (kgMorango * 2.50 + kgMaca * 1.80 ) * 10/100;
+                alert(`${"O Cliente pagará: "} ${(kgMorango * 2.50 + kgMaca * 1.80) - priceDescP}`);
+            }else{
+                alert(`${"O cliente pagará: "} ${kgMorango * 2.50 + kgMaca * 1.80}`);
+            };
+        }else{
+            if(kgMaca + kgMorango > 8 || kgMaca * 2.20 + kgMorango * 1.50 > 25){
+                let priceDescM =(kgMorango * 2.20 + kgMaca * 1.50 ) * 10/100;
+                alert(`${"O Cliente pagará: "} ${(kgMorango * 2.20 + kgMaca * 1.50 ) - priceDescM }`);
+            }else{
+                alert(`${"O cliente pagará: "} ${kgMorango * 2.20 + kgMaca * 1.50}`);
+            };
+        };
+    </script>
+</body>
+</html>

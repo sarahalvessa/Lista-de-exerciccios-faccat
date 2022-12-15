@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 12 | Lista FACCAT</title>
+</head>
+<body>
+    <!-- Faça um  algoritmo para ler: número da  conta do cliente, saldo, débito e  crédito. Após,  calcular e escrever o saldo atual (saldo atual = saldo - débito + crédito). Também testar se saldo atual for maior ou igual a zero escrever a mensagem 'Saldo Positivo', senão escrever a mensagem 'Saldo Negativo'.  -->
+    <script>
+        let conta = parseInt(prompt("Digite o número da sua conta"));
+
+        let saldo = parseInt(prompt("Digite o saldo da sua conta"));
+
+        let debito = parseInt(prompt("Digite o débito da sua conta"));
+
+        let credito = parseInt(prompt("Digite o crédito da sua conta"));
+
+        let saldoatual = saldo - debito + credito;
+
+        saldoatual >= 0 ? document.write("Seu saldo está positivo, onde corresponde a: " + saldoatual.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})) : document.write("Seu saldo está negativo, onde corresponde a: " + saldoatual.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}));
+    </script>
+</body>
+</html>

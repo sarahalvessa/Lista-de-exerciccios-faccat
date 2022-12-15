@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 23 | Lista FACCAT</title>
+</head>
+
+<body>
+    <!--  Escreva  um  algoritmo  que  leia  o  número  de  litros  vendidos  e  o  tipo  de  combustível (codificado  da seguinte  forma: A-álcool, G-gasolina),  calcule  e  imprima  o  valor  a  ser  pago  pelo  cliente  sabendo-se que o preço do litro da gasolina é R$ 3,30 e o preço do litro do álcool é R$ 2,90.-->
+    <script>
+        let nLitros = parseInt(prompt("Digite a quantidade de litros"));
+        let tipoCombustivel = prompt("Digite o tipo de combustivel");
+        let auxiliarUmAlcool = 0;
+        let auxiliarDoisAlcool = 0;
+
+        let auxiliarUmGasolina = 0;
+        let auxiliarDoisGasolina = 0;
+
+        if (tipoCombustivel == "A-álcool") {
+            if (nLitros <= 20) {
+                for (let i = 1; i <= 20; i++) {
+                    auxiliarUmAlcool += 2.90 * 3 / 100;
+                };
+                alert(`${"O cliente pagará"} ${(2.90 * nLitros) - auxiliarUmAlcool} ${"por"} ${nLitros} ${"litros de Álcool"}`)
+            } else {
+                auxiliarDoisAlcool = auxiliarDoisAlcool + 2.90 * 5 / 100;
+                let desc = auxiliarDoisAlcool * nLitros;
+                alert(`${"O cliente pagará"} ${(nLitros * 2.90) - desc} ${"por"} ${nLitros} ${"litros de Álcool"}`);
+            };
+        } else if (tipoCombustivel == "G-gasolina") {
+            if (nLitros <= 20) {
+                for (let e = 1; e <= 20; e++) {
+                    auxiliarUmGasolina += 3.30 * 4 / 100;
+                };
+                alert(`${"O cliente pagará"} ${(3.30 * nLitros) - auxiliarUmGasolina} ${"por"} ${nLitros} ${"litros de Gasolina"}`)
+            }else{
+                auxiliarDoisGasolina = auxiliarDoisGasolina + 3.30 * 6 / 100;
+                let descG = auxiliarDoisGasolina * nLitros;
+                alert(`${"O cliente pagará"} ${(3.30 * nLitros) - descG} ${"por"} ${nLitros} ${"litros de Gasolina"}`)
+            };
+        };
+    </script>
+</body>
+</html>

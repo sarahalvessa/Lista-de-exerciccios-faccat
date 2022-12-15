@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 11 | Lista FACCAT</title>
+</head>
+<body>
+    <!-- Ler o salário fixo e o valor das vendas efetuadas pelo vendedor de uma empresa. Sabendo-se que ele  recebe  uma  comissão  de  3%  sobre  o  total  das  vendas  até  R$  1.500,00  mais  5%  sobre  o  que ultrapassar este valor, calcular e escrever o seu salário total.  -->
+    <script>
+        let salariofixo = parseFloat(prompt("Digite seu sálario fixo"));
+
+        let valordasvendas = parseFloat(prompt("Digite o valor de suas vendas"));
+
+        let valorvendascomissaoone = (valordasvendas * 3 / 100) + valordasvendas + salariofixo;
+
+        let valorvendascomissaotwo = (valordasvendas * 5 / 100) + valordasvendas + salariofixo;
+
+        valordasvendas <= 1500 ? document.write(valorvendascomissaoone.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})) : document.write(valorvendascomissaotwo.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}));
+    </script>
+</body>
+</html>

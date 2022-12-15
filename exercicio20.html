@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 20 | Lista FACCAT</title>
+</head>
+
+<body>
+    <!--  Ler dois valores e imprimir uma das três mensagens a seguir: ‘Números iguais’, caso os números sejam iguais ‘Primeiro é maior’, caso o primeiro seja maior que o segundo; ‘Segundo maior’, caso o segundo seja maior que o primeiro.    -->
+    <script>
+        let valorA = parseInt(prompt("Digite o valor A"));
+
+        let valorB = parseInt(prompt("Digite o valor B"));
+
+        if(valorA === valorB){
+            alert("Números iguais!");
+        }else{
+            if(valorA > valorB){
+                alert("Valor A é maior que valor B");
+            }else{
+                alert("Valor B é maior que valor A");
+            };
+        };
+    </script>
+</body>
+</html>
